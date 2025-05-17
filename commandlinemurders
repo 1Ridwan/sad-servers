@@ -1,0 +1,106 @@
+## This was a very tough challenge but i managed to learn a lot about grep and awk
+## such as using awk to break text into fields, and then pass it to grep to search a specific column
+
+# I then used the clues i found and began combining lists into one and sorting them
+# using uniq -c to get a list of how many times a name appeared
+# then using grep to search the list and find which name was in all files
+
+## here is my rough working pad
+
+CLUE: Footage from an ATM security camera is blurry but shows that the perpetrator is a tall male, at least 6'.
+
+CLUE: Found a wallet believed to belong to the killer: no ID, just loose change, and membership cards for Rotary_Club, Delta SkyMiles, the local library, and the Museum of Bash History. The cards are totally untraceable and have no name, for some reason.
+
+CLUE: Questioned the barista at the local coffee shop. He said a woman left right before they heard the shots. The name on her latte was Annabel, she had blond spiky hair and a New Zealand accent.
+
+
+Woman from cafe:
+Annabel Church
+Ms. Church at 2:04 pm.  Witness stated that she did not see anyone she could identify as the shooter, that she ran away as soon as the shots were fired.
+
+License Plate L2E48EF
+Make: BMW
+Color: Orange
+Owner: Annabel Church
+Height: 5'5"
+Weight: 201 lbs
+
+Annabel Church  F       38      Buckingham Place, line 179
+
+
+From clue 2 the people with membership from all 4 are:
+4 Adrian Lidberg
+      4 Aldo Nicolas
+      4 Alexander Jiang
+      4 Andrei Masna
+      4 Dalibor Vidal
+      4 Elena Costa
+      4 Emmanuel Hornsey
+      4 Erik Plouffe
+      4 Georgina Issanova
+      4 Gia Mogawane
+      4 Ibrahima Csima
+      4 James McNeill
+      4 Joe Germuska
+      4 Joshua Fenclova
+      4 Lisa Edgar
+      4 Marlene Nicholson
+      4 Mary Tomashova
+      4 Mateusz Yi
+      4 Mclain Rakoczy
+      4 Nenad Blerk
+      4 Ravil Ismail
+      4 Sofiane Satch
+      4 Sonata Raif
+      4 Xiaodong Dulko
+      4 Yunwen Crous
+
+
+
+Match between member ppl and 6ftppl leaves us with:
+      2 Adrian Lidberg
+      2 Aldo Nicolas
+      2 Alexander Jiang
+      2 Andrei Masna
+      2 Dalibor Vidal
+      2 Elena Costa
+      2 Emmanuel Hornsey
+      2 Erik Plouffe
+      2 Georgina Issanova
+      2 Gia Mogawane
+      2 Ibrahima Csima
+      2 James McNeill
+      2 Joe Germuska
+      2 Joshua Fenclova
+      2 Lisa Edgar
+      2 Marlene Nicholson
+      2 Mary Tomashova
+      2 Mateusz Yi
+      2 Mclain Rakoczy
+      2 Nenad Blerk
+      2 Ravil Ismail
+      2 Sofiane Satch
+      2 Sonata Raif
+      2 Xiaodong Dulko
+      2 Yunwen Crou
+
+
+
+6ft, memberships, and male:
+Adrian Lidberg
+Aldo Nicolas
+Alexander Jiang
+Andrei Masna
+Dalibor Vidal
+Emmanuel Hornsey
+Erik Plouffe
+Gia Mogawane
+Ibrahima Csima
+James McNeill
+Joe Germuska
+Joshua Fenclova
+Mateusz Yi
+Mclain Rakoczy
+Nenad Blerk
+Ravil Ismail
+Sofiane Satch
