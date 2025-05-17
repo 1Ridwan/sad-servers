@@ -1,0 +1,7 @@
+# Command used
+
+cat scores.txt | awk '{print $2}' | awk '{sum += $1} END {if (NR > 0) printf "%.2f\n", sum / NR}' > scores.txt
+
+## this challenge taught me how awk can be used with arithmetic and also how to round numbers to decimal places
+## ive had experience in rounding numbers in C before, so seeing %.2 was very familiar
+
